@@ -1,0 +1,19 @@
+<mat-sidenav-container>
+  <mat-sidenav opened [mode]="'side'" #sidenav role="navigation" class="mat-elevation-z5">
+    <app-navbar></app-navbar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="header-panel" color="primary">
+      <mat-toolbar-row></mat-toolbar-row>
+      <mat-toolbar-row></mat-toolbar-row>
+    </mat-toolbar>
+    <div class="card">
+      <div class="content">
+        <div class="app-container">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

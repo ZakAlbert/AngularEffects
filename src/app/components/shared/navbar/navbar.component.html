@@ -1,0 +1,34 @@
+<mat-toolbar class="mat-elevation-z1">
+  <mat-toolbar-row>
+    <span>Angular Effects</span>
+    <span class="example-fill-remaining-space"></span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-nav-list dense>
+  <h3 mat-subheader>Paginas</h3>
+  <a mat-list-item routerLink="Home" routerLinkActive="router-link-active" >
+    <mat-icon mat-list-icon>home</mat-icon>
+    <p mat-line>Home</p>
+  </a>
+  <a mat-list-item routerLink="Usuario/1" routerLinkActive="router-link-active">
+    <mat-icon mat-list-icon>account_circle</mat-icon>
+    <p mat-line>Usuario</p>
+  </a>
+</mat-nav-list>
+
+<mat-list>
+  <mat-divider></mat-divider>
+  <h3 mat-subheader>Buscar</h3>
+  <mat-list-item>
+    <mat-form-field color="accent" appearance="standard">
+      <mat-label>ID Usuario</mat-label>
+      <input matInput #txtUsuario (keyup.enter)="searchUsuario(txtUsuario.value)">
+    </mat-form-field>
+    <span>
+      <button mat-icon-button (click)="searchUsuario(txtUsuario.value)">
+        <mat-icon>search</mat-icon>
+      </button>
+    </span>
+  </mat-list-item>
+</mat-list>

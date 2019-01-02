@@ -1,0 +1,36 @@
+<div class="row" style="justify-content: center; margin-top: 100px;" *ngIf="loading">
+  <mat-spinner diameter="40" color="accent"></mat-spinner>
+</div>
+
+<div class="row" style="margin-top: 30px;" *ngIf="error && !loading">
+  <div class="col-xs-12">
+    <div class="box">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-icon mat-card-avatar>cloud_off</mat-icon>
+          <mat-card-title>ERROR - {{error?.status}}</mat-card-title>
+          <mat-card-subtitle>
+            {{error?.url}}
+          </mat-card-subtitle>
+        </mat-card-header>
+        <p>{{error?.message}}</p>
+      </mat-card>
+      <br>
+    </div>
+  </div>
+</div>
+
+<div class="row" style="justify-content: center;" *ngIf="user && !loading">
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" >
+    <div class="box">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <img mat-card-avatar [src]="user.avatar" alt="Photo of a Shiba Inu">
+          <mat-card-title>{{ user.first_name }}</mat-card-title>
+          <mat-card-subtitle>{{user.last_name}}</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+      <br>
+    </div>
+  </div>
+</div>
